@@ -1,0 +1,7 @@
+.asciiart {
+    font-family:monospace;
+}
+
+.multiline {
+    white-space:pre-wrap;
+}
