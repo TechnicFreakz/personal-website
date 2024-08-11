@@ -325,3 +325,7 @@ a {
 a:hover {
     color: rgb(17, 170, 124);
 }
+
+.content {
+    padding: 2%;
+}
