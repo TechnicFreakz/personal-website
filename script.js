@@ -41,8 +41,8 @@ const CATEGORIES = [{
 function renderPosts() {
     let activeFilters = Array.from(document.getElementsByClassName('toggle-on')).map(button => button.innerHTML.substring(1));
     const posts = document.getElementsByClassName('post');
-    for (let post in posts) {    
-        filterTags = Array.from(post.classList).filter(tag => tag != 'post');
+    for (let i = 0; i < posts.length; i++) {
+        filterTags = Array.from(posts[i].classList).filter(tag => tag != 'post');
         if (logic == "or") {
             posts[i].style.display = filterTags.some(e => activeFilters.includes(e)) ? "block" : "none";
         } else {
