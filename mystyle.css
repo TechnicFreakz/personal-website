@@ -1,7 +1,327 @@
 .asciiart {
     font-family:monospace;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-wrap;
 }
 
-.multiline {
-    white-space:pre-wrap;
+body {
+    font-family: sans-serif;
+    margin: 0 auto;
+    max-width: 58rem;
+    line-height: 1.45;
+    padding: 0.5rem 0 1.6rem;
+    box-shadow: 0 0 2rem 0 #bbbbbb;
+    border-radius: 0 0 0.6rem 0.6rem;
+    overflow-y: scroll;
+}
+
+main {
+    padding: 0 1.4rem;
+    hyphens: auto;
+}
+
+div {
+    display: block;
+}
+
+code {
+    background: #eee;
+    padding: 0.3rem;
+    tab-size: 4;
+}
+
+pre code {
+    display: block;
+    overflow-x: auto;
+    padding: 0.3rem 0.6rem;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: rgb(17, 170, 124);
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li * {
+    display: block;
+    padding: 0.4rem 0.4rem;
+    color: white;
+}
+
+nav li strong {
+    padding-left: 1.5rem;
+    padding-right: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #069;
+}
+
+/* BUTTONS AND TOGGLES */
+
+button {
+    background-color: lightgray;
+    border: 1.5px solid #00000022;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 20px;
+    padding: 7px 15px 7px 15px;
+}
+
+.toggle {
+    background-color: gray;
+    border: 1px solid rgb(197, 70, 70) !important;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center !important;
+    padding: 1%;
+}
+
+.toggle-on {
+    background-color: lightgray;
+    border: 1.5px solid rgb(152, 204, 152) !important;
+}
+
+.or-logic, .and-logic {
+    width: 70px;
+}
+
+button:active {
+    box-shadow: none !important;
+}
+
+.tag {
+    cursor: help !important;
+    background-color: #22222255 !important;
+    color: #DEE3E3 !important;
+    text-decoration: none !important;
+}
+
+/* JAVASCRIPT THINGS */
+
+.hidden {
+    display: none !important;
+}
+
+/* TOOLTPIP */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    inline-size: 100%;
+    overflow-wrap: break-word;
+    border-radius: 6px;
+    margin-top: 30%;
+    padding: 4%;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+    /* transition */
+    opacity: 0;
+    transition: opacity 100ms;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+/* RESPONSIVE */
+
+/* For Mobile */
+@media screen and (max-width: 600px) {
+    .asciiart {
+            font-size: calc(10vw / 6);
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .filtering {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .flex-item-right,
+    .flex-item-left {
+        flex: 100%;
+    }
+
+    .photoinfo-right {
+        display: none;
+    }
+}
+
+/* For tablet */
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    .asciiart {
+            font-size: calc(5px + 10vw / 12);
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .filtering {
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+/* For computer */
+@media screen and (min-width: 1200px) {
+    .asciiart {
+        font-size: 15px;
+    }
+
+    .posts {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+
+    .filtering {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%
+    }
+}
+
+
+/* For Mobile */
+@media screen and (max-width: 800px) {
+    .navbary {
+        /* margin: 1%; */
+        border-radius: 10px;
+        padding: 1%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+/* For computer */
+@media screen and (min-width: 800px) {
+    .navbary {
+        /* margin: 1%; */
+        border-radius: 10px;
+        padding: 1%;
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+    }
+}
+
+/* CONTAINERS */
+
+.generic-container {
+    display: block;
+    border-style: none;
+    margin: auto;
+    text-align: center;
+}
+
+.posts {
+    padding: 1%;
+    justify-content: center !important;
+}
+
+.post {
+    background-color: #1e9e9622 !important;
+    color: white !important;
+    border: 1.5px solid #404e4d11;
+    border-radius: 1.5%;
+    padding: 2%;
+    margin: 2%;
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+}
+
+.post * {
+    color: black;
+}
+
+.card-footer {
+    border-top: none !important;
+}
+
+.show-tags-container {
+    padding: 0%;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tag {
+    padding: 5px 5px 5px 5px;
+    border-radius: 5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.flex-item-left {
+    margin-bottom: 5%;
+    padding: 5px;
+    flex: 50%;
+}
+
+
+.flex-item-right {
+    padding: 5px;
+    flex: 50%;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(17, 170, 124);
 }

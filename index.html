@@ -1,29 +1,113 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> exe.Cushions website </title>
-        <link rel="stylesheet" href="mystyle.css">
-    </head>
-    <body>
-        <p class="multiline asciiart">
-                  _____          _     _             _      __          __  _         _ _
-                 / ____|        | |   (_)           ( )     \ \        / / | |       (_) |
-   _____  _____ | |    _   _ ___| |__  _  ___  _ __ |/ ___   \ \  /\  / /__| |__  ___ _| |_ ___
-  / _ \ \/ / _ \| |   | | | / __| '_ \| |/ _ \| '_ \  / __|   \ \/  \/ / _ \ '_ \/ __| | __/ _ \
- |  __/>  <  __/| |___| |_| \__ \ | | | | (_) | | | | \__ \    \  /\  /  __/ |_) \__ \ | ||  __/
-  \___/_/\_\___(_)_____\__,_|___/_| |_|_|\___/|_| |_| |___/     \/  \/ \___|_.__/|___/_|\__\___|
-                                                                                                                               
-                                                                                                                                 
-=====================================================================================================
-        <p class="multiline">
-            Hey! :)
-            I am glad you found your way here.
-            I am a computer science student currently living in Karlsruhe, Germany.
-            In my free time I like to construct things with Lego Technic, some of which you can see on my <a href="https://www.youtube.com/@technicfreakz9490/">YouTube</a>.
-            I also do lots of sports, mainly Parkour, Freerunning, Tricking and Calisthenics
-            as well as read books. Some of my <a href="sections/books/books.html">thoughts about the books</a> I read will end up on this website.
-        <p class="multiline">
-            You can find everything else in the <a href="sections/sections.html">archive</a>.
-    </body>
-</html>
+  <head>
+    <title>exe.Cushions website</title>
+    <link rel="stylesheet" href="mystyle.css" />
+    <script src="script.js"></script>
+  </head>
 
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <strong>exe.Cushion</strong>
+        </li>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+      </ul>
+    </nav>
+    <pre class="asciiart">
+                 _____          _     _             _      __          __  _         _ _
+                / ____|        | |   (_)           ( )     \ \        / / | |       (_) |
+  _____  _____ | |    _   _ ___| |__  _  ___  _ __ |/ ___   \ \  /\  / /__| |__  ___ _| |_ ___
+ / _ \ \/ / _ \| |   | | | / __| '_ \| |/ _ \| '_ \  / __|   \ \/  \/ / _ \ '_ \/ __| | __/ _ \
+|  __/>  <  __/| |___| |_| \__ \ | | | | (_) | | | | \__ \    \  /\  /  __/ |_) \__ \ | ||  __/
+ \___/_/\_\___(_)_____\__,_|___/_| |_|_|\___/|_| |_| |___/     \/  \/ \___|_.__/|___/_|\__\___|
+
+
+
+    </pre>
+    <main>
+      <p>
+        Hey! :) I am glad you found your way here. I am a
+        <code>computer science</code> student currently living in Karlsruhe,
+        Germany. In my free time I like to construct things with Lego Technic,
+        some of which you can see on my
+        <a href="https://www.youtube.com/@technicfreakz9490/">YouTube</a>. I
+        also do lots of sports, mainly Parkour, Freerunning, Tricking and
+        Calisthenics as well as read books. Some of my
+        <a href="sections/books/books.html">thoughts about the books</a> I read
+        will end up on this website.
+      </p>
+      <p>
+        You can find everything else in the
+        <a href="sections/sections.html">archive</a>.
+      </p>
+
+      <nav>
+        <span class="buttons">
+          <button
+            class="button is-rounded hide-tags"
+            onclick="toggleTagVisibility()"
+            type="button"
+          >
+            Tags ▼
+          </button>
+          <button
+            class="button is-rounded show-tags hidden"
+            onclick="toggleTagVisibility()"
+            type="button"
+          >
+            Tags ▲
+          </button>
+          <button
+            class="button is-rounded toggle-all"
+            onclick="toggleAllFilters()"
+            type="button"
+          >
+            Toggle all
+          </button>
+          <button
+            class="button is-rounded and-logic hidden"
+            onclick="toggleLogic()"
+            type="button"
+          >
+            AND
+          </button>
+          <button
+            class="button is-rounded or-logic"
+            onclick="toggleLogic()"
+            type="button"
+          >
+            OR
+          </button>
+        </span>
+        <span class="buttons filtering" style="display: none"> </span>
+        </div>
+      </nav>
+      <div id="posts" class="posts">
+        <div class="post book leisure fantasy">
+          <div style="display: flex; justify-content: space-between;">
+            <h2 class="post-title"><a href="posts/_template.html">4th Wing</a></h2>
+          </div>
+          <p class="card-text">
+            An adult fantasy book set in a fictional medieval-style world with magic and dragons.
+          </p>
+        </div>
+
+        <div class = "post">
+          <div style="display: flex; justify-content: space-between;">
+            <h2 class="post-title"><a href="posts/_template.html">4th Wing</a></h2>
+          </div>
+          <p class="card-text">
+            An adult fantasy book set in a fictional medieval-style world with magic and dragons.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
