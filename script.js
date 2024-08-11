@@ -9,6 +9,33 @@ const CATEGORIES = [{
 }, {
     'tag': 'fantasy',
     'desc': 'Media set in fantasy worlds.'
+}, {
+    'tag': 'opinion',
+    'desc': 'My personal opinion about stuff.'
+}, {
+    'tag': 'society',
+    'desc': 'A topic concerning the entire society.'
+}, {
+    'tag': 'project',
+    'desc': 'A post about a personal project of mine'
+}, {
+    'tag': 'IT',
+    'desc': 'A post about IT stuff.'
+}, {
+    'tag': 'hardware',
+    'desc': 'A post about hardware stuff.'
+}, {
+    'tag': 'fun',
+    'desc': 'Shits n giggles'
+}, {
+    'tag': 'physics',
+    'desc': 'Beware! This post contains physics talk! Flatearthers keep out.'
+}, {
+    'tag': 'popscience',
+    'desc': 'Scratching the edge of actual science but only so slightly that me and you can understand :)'
+}, {
+    'tag': '',
+    'desc': ''
 }];
 
 function renderPosts() {
