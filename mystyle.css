@@ -329,3 +329,7 @@ a:hover {
 .content {
     padding: 2%;
 }
+
+p a {
+    color: #12ce41c7;
+}
