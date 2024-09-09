@@ -33,9 +33,9 @@ const CATEGORIES = [{
 }, {
     'tag': 'popscience',
     'desc': 'Scratching the edge of actual science but only so slightly that me and you can understand :)'
-}, {
-    'tag': '',
-    'desc': ''
+// }, {
+//     'tag': '',
+//     'desc': ''
 }];
 
 function renderPosts() {
