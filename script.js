@@ -33,6 +33,9 @@ const CATEGORIES = [{
 }, {
     'tag': 'popscience',
     'desc': 'Scratching the edge of actual science but only so slightly that me and you can understand :)'
+}, {
+    'tag': 'tool',
+    'desc': 'Let this website do the work for you!'
 // }, {
 //     'tag': '',
 //     'desc': ''
